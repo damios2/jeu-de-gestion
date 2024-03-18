@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://btr5jey5jakck"]
+
+[ext_resource type="Script" path="res://scripts/scene_jeu.gd" id="1_obkcc"]
+[ext_resource type="Texture2D" uid="uid://bdxlmldiremyp" path="res://textures/cadrillage.png" id="2_p22m0"]
+[ext_resource type="Texture2D" uid="uid://dvt4mmb47glju" path="res://textures/coin.png" id="3_kd7vt"]
+[ext_resource type="PackedScene" uid="uid://bn8wsk0abjggg" path="res://scènes/mine_d_or.tscn" id="4_jc7bq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ki8af"]
+texture = ExtResource("2_p22m0")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mq3u5"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_ki8af")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_obkcc")
+
+[node name="cadrillage" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_mq3u5")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(65534, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, -65534, 0, 0, -65535, 0, 0, -3, 0, 0, 65533, 0, 0, -65533, 0, 0, -4, 0, 0, -5, 0, 0, -6, 0, 0, -65543, 0, 0, -131079, 0, 0, -196615, 0, 0, -196616, 0, 0, -196617, 0, 0, -262153, 0, 0, -262152, 0, 0, -262151, 0, 0, -262150, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262149, 0, 0, -262148, 0, 0, -262147, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -327676, 0, 0, -327677, 0, 0, -327678, 0, 0, -327679, 0, 0, -327680, 0, 0, -262145, 0, 0, -262146, 0, 0, -327675, 0, 0, -327674, 0, 0, -327673, 0, 0, -327672, 0, 0, -262136, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, 262152, 0, 0, 262151, 0, 0, 262150, 0, 0, 262149, 0, 0, 262148, 0, 0, 262147, 0, 0, 196610, 0, 0, 196609, 0, 0, 196608, 0, 0, 262143, 0, 0, 262142, 0, 0, 262141, 0, 0, 262140, 0, 0, 262139, 0, 0, 327675, 0, 0, 327674, 0, 0, 327673, 0, 0, 327672, 0, 0, 327671, 0, 0, 262135, 0, 0, 196599, 0, 0, 131063, 0, 0, 65528, 0, 0, -8, 0, 0, -65544, 0, 0, -131080, 0, 0, -65545, 0, 0, -9, 0, 0, -131081, 0, 0, 65527, 0, 0, -131078, 0, 0, -131077, 0, 0, -65542, 0, 0, -196614, 0, 0, -65541, 0, 0, -65540, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -131070, 0, 0, -131071, 0, 0, -131072, 0, 0, -65537, 0, 0, -65538, 0, 0, -65539, 0, 0, -131069, 0, 0, -131068, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -131066, 0, 0, -131067, 0, 0, -65532, 0, 0, -196600, 0, 0, 65544, 0, 0, 8, 0, 0, -65528, 0, 0, -131064, 0, 0, 131080, 0, 0, 131079, 0, 0, 131078, 0, 0, 131077, 0, 0, 131076, 0, 0, 131075, 0, 0, 131074, 0, 0, 131073, 0, 0, 131072, 0, 0, 196607, 0, 0, 196606, 0, 0, 196605, 0, 0, 327677, 0, 0, 327676, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 196614, 0, 0, 196615, 0, 0, 196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196616, 0, 0, 65543, 0, 0, 65542, 0, 0, 65541, 0, 0, 65540, 0, 0, 65539, 0, 0, 65538, 0, 0, 65537, 0, 0, 65536, 0, 0, 131071, 0, 0, 131070, 0, 0, 131069, 0, 0, 131068, 0, 0, 131067, 0, 0, 131066, 0, 0, 131065, 0, 0, 65529, 0, 0, 65530, 0, 0, -7, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, 5, 0, 0, 4, 0, 0, 3, 0, 0, 2, 0, 0, 6, 0, 0, 7, 0, 0, 131064, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 262138, 0, 0, 262137, 0, 0, 262136, 0, 0, 65532, 0, 0, 65531, 0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.059
+anchor_right = 0.875
+anchor_bottom = 0.059
+offset_left = -110.0
+offset_top = -11.232
+offset_right = 109.0
+offset_bottom = 11.768
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Coin" type="Sprite2D" parent="CanvasLayer/Label"]
+position = Vector2(237, 12)
+texture = ExtResource("3_kd7vt")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.983
+anchor_top = 0.969
+anchor_right = 0.983
+anchor_bottom = 0.969
+offset_left = -20.416
+offset_top = -19.912
+offset_right = 19.584
+offset_bottom = 20.088
+
+[node name="Node2D" parent="." instance=ExtResource("4_jc7bq")]
+position = Vector2(0, -16)
+
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

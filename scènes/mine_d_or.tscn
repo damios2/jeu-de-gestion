@@ -1,0 +1,157 @@
+[gd_scene load_steps=22 format=3 uid="uid://bn8wsk0abjggg"]
+
+[ext_resource type="Script" path="res://scripts/scene_mine_or.gd" id="1_x2dws"]
+[ext_resource type="Texture2D" uid="uid://bttpp0tasdavk" path="res://textures/mine d'or 1.png" id="2_foae3"]
+[ext_resource type="Texture2D" uid="uid://cd4nfxkiilj85" path="res://textures/mine d'or 2.png" id="3_2unx8"]
+[ext_resource type="Texture2D" uid="uid://bg276kkwjuc62" path="res://textures/mine d'or 3.png" id="4_7p4ex"]
+[ext_resource type="Texture2D" uid="uid://dcwcllv1vy2w" path="res://textures/mine d'or 4.png" id="5_yfrb7"]
+[ext_resource type="Texture2D" uid="uid://bar4mlmfhsxqu" path="res://textures/mine d'or 5.png" id="6_jlt7e"]
+[ext_resource type="Texture2D" uid="uid://g1mrmcghi0bp" path="res://textures/mine d'or 6.png" id="7_fu4p0"]
+[ext_resource type="Texture2D" uid="uid://b8hmnu8f8qnsl" path="res://textures/mine d'or 7.png" id="8_ri4me"]
+[ext_resource type="Texture2D" uid="uid://eew7iy0w8neq" path="res://textures/mine d'or 8.png" id="9_nil1g"]
+[ext_resource type="Texture2D" uid="uid://cyw12l5mw0ll8" path="res://textures/mine d'or 9.png" id="10_tgkqw"]
+[ext_resource type="Texture2D" uid="uid://3g8qsg7b3tbc" path="res://textures/mine d'or 10.png" id="11_q57ml"]
+[ext_resource type="Texture2D" uid="uid://bnbqxai2s24mk" path="res://textures/mine d'or 11.png" id="12_yugnj"]
+[ext_resource type="Texture2D" uid="uid://cv7wbrmy0hxrj" path="res://textures/mine d'or 12.png" id="13_mvq0a"]
+[ext_resource type="Texture2D" uid="uid://gigffxta1k12" path="res://textures/mine d'or 13.png" id="14_h8kxm"]
+[ext_resource type="Texture2D" uid="uid://d0dhb0pgoonls" path="res://textures/mine d'or 14.png" id="15_xjme3"]
+[ext_resource type="Texture2D" uid="uid://jnjwsa65c8fp" path="res://textures/mine d'or 15.png" id="16_u6r5e"]
+[ext_resource type="Texture2D" uid="uid://c6dys58rvbjja" path="res://textures/mine d'or 16.png" id="17_chtan"]
+[ext_resource type="Texture2D" uid="uid://yk4h0jrg6co0" path="res://textures/mine d'or 17.png" id="18_t2fj2"]
+[ext_resource type="Texture2D" uid="uid://cwss3m4mis2ag" path="res://textures/bouton coin.png" id="19_rueev"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ajvyv"]
+animations = [{
+"frames": [{
+"duration": 41.0,
+"texture": ExtResource("2_foae3")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_2unx8")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_7p4ex")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_yfrb7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_jlt7e")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_fu4p0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_ri4me")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_nil1g")
+}, {
+"duration": 0.5,
+"texture": ExtResource("10_tgkqw")
+}, {
+"duration": 0.5,
+"texture": ExtResource("11_q57ml")
+}, {
+"duration": 0.5,
+"texture": ExtResource("12_yugnj")
+}, {
+"duration": 0.5,
+"texture": ExtResource("13_mvq0a")
+}, {
+"duration": 0.5,
+"texture": ExtResource("14_h8kxm")
+}, {
+"duration": 0.5,
+"texture": ExtResource("15_xjme3")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_u6r5e")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_chtan")
+}, {
+"duration": 4.0,
+"texture": ExtResource("18_t2fj2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_chtan")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_u6r5e")
+}, {
+"duration": 0.5,
+"texture": ExtResource("15_xjme3")
+}, {
+"duration": 0.5,
+"texture": ExtResource("14_h8kxm")
+}, {
+"duration": 0.5,
+"texture": ExtResource("13_mvq0a")
+}, {
+"duration": 0.5,
+"texture": ExtResource("12_yugnj")
+}, {
+"duration": 0.5,
+"texture": ExtResource("11_q57ml")
+}, {
+"duration": 0.5,
+"texture": ExtResource("10_tgkqw")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_nil1g")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_ri4me")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_fu4p0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_jlt7e")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_yfrb7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_7p4ex")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_2unx8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv2pd"]
+size = Vector2(30, 30)
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_x2dws")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+sprite_frames = SubResource("SpriteFrames_ajvyv")
+frame_progress = 0.188515
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+shape = SubResource("RectangleShape2D_jv2pd")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -17.0
+offset_top = -76.0
+offset_bottom = -56.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("19_rueev")
+
+[connection signal="area_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="StaticBody2D/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="StaticBody2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
