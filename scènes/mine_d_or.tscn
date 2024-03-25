@@ -127,7 +127,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jv2pd"]
 size = Vector2(30, 30)
 
-[node name="Node2D" type="Node2D"]
+[node name="mine d\'or" type="Node2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_x2dws")
 
@@ -144,6 +144,7 @@ frame_progress = 0.188515
 shape = SubResource("RectangleShape2D_jv2pd")
 
 [node name="TextureButton" type="TextureButton" parent="."]
+visible = false
 offset_left = -17.0
 offset_top = -76.0
 offset_bottom = -56.0

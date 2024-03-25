@@ -1,20 +1,15 @@
 extends Node2D
 
-var nb_or = 0
-var grid_size = Vector2(16, 16)
-var in_area = false
 var ignore = false
-var last_pos = Vector2()
+var in_area = false
 var place = true
-var ntemps = 0
-var ltemps = 0
-var production = true
+var last_pos = Vector2()
+var grid_size = Vector2(16,16)
 var allow_cad = true
+var nb_or = 0
+var prod = true
 
 @onready var cadrillage = get_node('../cadrillage')
-
-func _ready():
-	ntemps = int(Time.get_unix_time_from_system())
 
 func _physics_process(delta):
 	if Input.is_action_pressed("clic gauche") and in_area == true:
@@ -32,13 +27,12 @@ func _physics_process(delta):
 			cadrillage.visible = false
 			allow_cad = false
 	
-	if production == true:
-		production = false
-		nb_or += 10
-		if nb_or > 100:
-			$TextureButton.visible = true
-		await get_tree().create_timer(1).timeout
-		production = true
+	if prod == true and get_node("../centre_d_extraction").nb_uor >= 10:
+		prod = false
+		get_node("../centre_d_extraction").nb_uor -= 10
+		get_node("../centre_d_extraction").nb_ror += 12
+		await get_tree().create_timer(10).timeout
+		prod = true
 
 func _on_area_2d_mouse_entered():
 	if Input.is_action_pressed("clic gauche") == false:
@@ -53,8 +47,3 @@ func _on_area_2d_area_entered(area):
 
 func _on_area_2d_area_exited(area):
 	place = true
-
-func _on_texture_button_pressed():
-	get_node("../centre_d_extraction").nb_uor += nb_or
-	nb_or = 0
-	$TextureButton.visible = false

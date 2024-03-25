@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="jeu de gestion"
-run/main_scene="res://scènes/mine_d_or.tscn"
+run/main_scene="res://scènes/jeu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
