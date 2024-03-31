@@ -4,7 +4,7 @@ var save_list = []
 var save_line
 var auto_save = true
 
-@onready var centre_extraction = $centre_d_extraction
+@onready var centre_extraction = $Node2D/centre_d_extraction
 
 func _ready():
 	var save = FileAccess.open("fichier_sauvegarde.save",FileAccess.READ)
@@ -21,7 +21,6 @@ func _process(delta):
 		save_list = []
 		save_list.append(centre_extraction.nb_uor)
 		save_list.append(centre_extraction.nb_ror)
-		print(save_list)
 		var save = FileAccess.open("fichier_sauvegarde.save",FileAccess.WRITE)
 		for i in range(save_list.size()):
 			save_line = JSON.stringify(save_list[i])

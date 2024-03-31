@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var text_coin = get_node("../CanvasLayer/Label")
+@onready var text_coin = get_parent().get_node("../CanvasLayer/Label")
 var nb_uor = 0
 var nb_ror = 0
 

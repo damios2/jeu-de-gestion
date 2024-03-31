@@ -9,7 +9,10 @@ var allow_cad = true
 var nb_or = 0
 var prod = true
 
-@onready var cadrillage = get_node('../cadrillage')
+@onready var cadrillage = get_parent().get_node('../cadrillage')
+
+func _ready():
+	$StaticBody2D/AnimatedSprite2D.play("default")
 
 func _physics_process(delta):
 	if Input.is_action_pressed("clic gauche") and in_area == true:
@@ -43,6 +46,7 @@ func _on_area_2d_mouse_exited():
 		in_area = false
 
 func _on_area_2d_area_entered(area):
+	await get_tree().create_timer(0.1).timeout
 	place = false
 
 func _on_area_2d_area_exited(area):

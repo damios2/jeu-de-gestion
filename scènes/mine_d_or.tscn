@@ -23,7 +23,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajvyv"]
 animations = [{
 "frames": [{
-"duration": 41.0,
+"duration": 44.5,
 "texture": ExtResource("2_foae3")
 }, {
 "duration": 0.5,
@@ -136,7 +136,7 @@ scale = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
 sprite_frames = SubResource("SpriteFrames_ajvyv")
-frame_progress = 0.188515
+frame_progress = 0.615628
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 

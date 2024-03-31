@@ -1,13 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://bunoxyv1csgii"]
+[gd_scene load_steps=8 format=3 uid="uid://bunoxyv1csgii"]
 
 [ext_resource type="Script" path="res://scripts/scene_rafinerie.gd" id="1_cqdov"]
-[ext_resource type="Texture2D" uid="uid://bttpp0tasdavk" path="res://textures/mine d'or 1.png" id="2_arexr"]
+[ext_resource type="Texture2D" uid="uid://dil71dsuk2ng8" path="res://textures/rafinerie 1.png" id="2_n7pum"]
+[ext_resource type="Texture2D" uid="uid://dd4tnde8iughf" path="res://textures/rafinerie 2.png" id="3_4iply"]
+[ext_resource type="Texture2D" uid="uid://dmr10xk0swm2j" path="res://textures/rafinerie 3.png" id="4_c7raf"]
+[ext_resource type="Texture2D" uid="uid://fao3tp07nfks" path="res://textures/rafinerie 4.png" id="5_xy8ou"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5aj0n"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_arexr")
+"duration": 45.0,
+"texture": ExtResource("2_n7pum")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_4iply")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_c7raf")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_xy8ou")
 }],
 "loop": true,
 "name": &"default",
@@ -17,10 +29,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5eo7"]
 size = Vector2(30, 30)
 
-[node name="Node2D" type="Node2D"]
+[node name="rafinerie" type="Node2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_cqdov")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
 sprite_frames = SubResource("SpriteFrames_5aj0n")
