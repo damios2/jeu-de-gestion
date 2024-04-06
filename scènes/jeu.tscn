@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c8dpee4ax4oj2" path="res://textures/sol.png" id="2_62fs0"]
 [ext_resource type="Texture2D" uid="uid://bdxlmldiremyp" path="res://textures/cadrillage.png" id="2_p22m0"]
 [ext_resource type="Texture2D" uid="uid://dvt4mmb47glju" path="res://textures/coin.png" id="3_kd7vt"]
-[ext_resource type="PackedScene" uid="uid://bn8wsk0abjggg" path="res://scènes/mine_d_or.tscn" id="4_jc7bq"]
 [ext_resource type="Script" path="res://scripts/centre d'extraction.gd" id="4_pfaxo"]
-[ext_resource type="PackedScene" uid="uid://bunoxyv1csgii" path="res://scènes/rafinerie.tscn" id="7_s3uol"]
+[ext_resource type="Script" path="res://scripts/Area2D.gd" id="7_7rsrc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3rcgo"]
 texture = ExtResource("2_62fs0")
@@ -31,6 +30,9 @@ sources/0 = SubResource("TileSetAtlasSource_ki8af")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eplws"]
 size = Vector2(62, 62)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysg87"]
+size = Vector2(32, 32)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_obkcc")
 
@@ -38,7 +40,7 @@ script = ExtResource("1_obkcc")
 tile_set = SubResource("TileSet_agcyv")
 rendering_quadrant_size = 32
 format = 2
-layer_0/tile_data = PackedInt32Array(327671, 0, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 196615, 0, 0, 196616, 0, 0, 196614, 0, 0, 196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 196608, 0, 0, 262143, 0, 0, 262142, 0, 0, 262141, 0, 0, 262140, 0, 0, 262139, 0, 0, 262138, 0, 0, 262137, 0, 0, 262136, 0, 0, 262135, 0, 0, 196599, 0, 0, 131063, 0, 0, 65527, 0, 0, -65528, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 131070, 0, 0, 65534, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 196601, 0, 0, 131065, 0, 0, 65529, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 196603, 0, 0, 131067, 0, 0, 65531, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 196605, 0, 0, 131069, 0, 0, 65533, 0, 0, 196606, 0, 0, 196607, 0, 0, 131071, 0, 0, 65535, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 131073, 0, 0, 65537, 0, 0, 1, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 131075, 0, 0, 65539, 0, 0, 3, 0, 0, -65533, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 131077, 0, 0, 65541, 0, 0, 5, 0, 0, -65531, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 131079, 0, 0, 65543, 0, 0, 7, 0, 0, -65529, 0, 0, -65535, 0, 0, -262153, 0, 0, -262152, 0, 0, -262151, 0, 0, -262150, 0, 0, -262149, 0, 0, -262148, 0, 0, -262147, 0, 0, -262146, 0, 0, -262145, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327676, 0, 0, -327675, 0, 0, -327674, 0, 0, -327673, 0, 0, -327672, 0, 0, -262136, 0, 0, -262137, 0, 0, -262138, 0, 0, -262139, 0, 0, -262140, 0, 0, -262141, 0, 0, -262142, 0, 0, -262143, 0, 0, -262144, 0, 0, -196609, 0, 0, -196610, 0, 0, -196611, 0, 0, -196612, 0, 0, -196613, 0, 0, -196614, 0, 0, -196615, 0, 0, -196616, 0, 0, -196617, 0, 0, -131080, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -65543, 0, 0, -65544, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -196600, 0, 0, -131081, 0, 0, -65545, 0, 0, -9, 0, 0, -8, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0)
+layer_0/tile_data = PackedInt32Array(327671, 0, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 196615, 0, 0, 196616, 0, 0, 196614, 0, 0, 196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 196608, 0, 0, 262143, 0, 0, 262142, 0, 0, 262141, 0, 0, 262140, 0, 0, 262139, 0, 0, 262138, 0, 0, 262137, 0, 0, 262136, 0, 0, 262135, 0, 0, 196599, 0, 0, 131063, 0, 0, 65527, 0, 0, -65528, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 131070, 0, 0, 65534, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 196601, 0, 0, 131065, 0, 0, 65529, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 196603, 0, 0, 131067, 0, 0, 65531, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 196605, 0, 0, 131069, 0, 0, 65533, 0, 0, 196606, 0, 0, 196607, 0, 0, 131071, 0, 0, 65535, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 131073, 0, 0, 65537, 0, 0, 1, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 131075, 0, 0, 65539, 0, 0, 3, 0, 0, -65533, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 131077, 0, 0, 65541, 0, 0, 5, 0, 0, -65531, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 131079, 0, 0, 65543, 0, 0, 7, 0, 0, -65529, 0, 0, -65535, 0, 0, -262153, 0, 0, -262152, 0, 0, -262151, 0, 0, -262150, 0, 0, -262149, 0, 0, -262148, 0, 0, -262147, 0, 0, -262146, 0, 0, -262145, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327676, 0, 0, -327675, 0, 0, -327674, 0, 0, -327673, 0, 0, -327672, 0, 0, -262136, 0, 0, -262137, 0, 0, -262138, 0, 0, -262139, 0, 0, -262140, 0, 0, -262141, 0, 0, -262142, 0, 0, -262143, 0, 0, -262144, 0, 0, -196609, 0, 0, -196610, 0, 0, -196611, 0, 0, -196612, 0, 0, -196613, 0, 0, -196614, 0, 0, -196615, 0, 0, -196616, 0, 0, -196617, 0, 0, -131080, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -65543, 0, 0, -65544, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -196600, 0, 0, -131081, 0, 0, -65545, 0, 0, -9, 0, 0, -8, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0, 262152, 0, 0)
 
 [node name="cadrillage" type="TileMap" parent="."]
 visible = false
@@ -58,21 +60,22 @@ y_sort_enabled = true
 script = ExtResource("4_pfaxo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/centre_d_extraction"]
+position = Vector2(-2.32458e-06, -1.37091e-06)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_s5feq")
 
 [node name="Area2D" type="Area2D" parent="Node2D/centre_d_extraction"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/centre_d_extraction/Area2D"]
 shape = SubResource("RectangleShape2D_eplws")
 
-[node name="mine d\'or1" parent="Node2D" instance=ExtResource("4_jc7bq")]
-position = Vector2(16, -48)
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("7_7rsrc")
 
-[node name="mine d\'or2" parent="Node2D" instance=ExtResource("4_jc7bq")]
-position = Vector2(-16, -48)
-
-[node name="rafinerie1" parent="Node2D" instance=ExtResource("7_s3uol")]
-position = Vector2(48, -16)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ysg87")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -101,9 +104,12 @@ anchor_left = 0.983
 anchor_top = 0.969
 anchor_right = 0.983
 anchor_bottom = 0.969
-offset_left = -20.416
-offset_top = -19.912
-offset_right = 19.584
-offset_bottom = 20.088
+offset_left = -38.416
+offset_top = -37.912
+offset_right = -38.416
+offset_bottom = -37.912
+scale = Vector2(3, 3)
 
-[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="Node2D/centre_d_extraction" method="_on_texture_button_pressed"]
